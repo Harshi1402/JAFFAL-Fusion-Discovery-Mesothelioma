@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the following metadata."
+authors:
+- family-names: "Khot"
+  given-names: "Harshita"
+  orcid: "https://orcid.org/0009-0004-1119-520X"
+title: "JAFFAL-Fusion-Discovery-Mesothelioma"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2026-07-17
+url: "https://github.com/Harshi1402/JAFFAL-Fusion-Discovery-Mesothelioma"
+repository-code: "https://github.com/Harshi1402/JAFFAL-Fusion-Discovery-Mesothelioma"
+abstract: >
+  A portfolio-safe reconstruction of a long-read, splice-aware fusion discovery workflow
+  applied to AE17 and AB1-HA murine mesothelioma transcriptomes using JAFFAL, minimap2,
+  custom triage rules, and multi-replicate scoring (FusionScore and CohortScore).

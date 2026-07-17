@@ -5,6 +5,8 @@ This repository documents my personal workflow for detecting and prioritising RN
 >This GitHub project is a *portfolio summary* of my Master's dissertation work at UWA.  
 >It is **not** intended for academic reuse, submission, or replication in coursework.
 
+**JAFFAL (long-read fusion caller):** https://github.com/Oshlack/JAFFAL
+**Reference paper:** Davidson, N.M. et al. (2022). JAFFAL: Detecting fusion genes with long-read transcriptome sequencing. *Genome Biology*, 23, 10.
 
 ### Why This Matters
 
@@ -136,7 +138,14 @@ IGV visualisation confirmed exon-consistent split reads for **Fam221b–Serf2**,
 - Compare with another long-read caller (e.g., LongGF)  
 - Explore direct RNA sequencing to reduce RT artefacts  
 
----
+## Tools Used
+
+- **JAFFAL** — splice-aware long-read fusion caller  
+- **Minimap2** — transcriptome + genome alignment  
+- **Samtools** — BAM processing  
+- **RStudio + ggplot2 + ComplexHeatmap** — visualisation  
+- **IGV** — read-level validation  
+
 
 ##  Repository Structure
 

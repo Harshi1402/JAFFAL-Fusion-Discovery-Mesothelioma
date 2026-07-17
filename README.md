@@ -6,6 +6,7 @@ This repository documents my personal workflow for detecting and prioritising RN
 >It is **not** intended for academic reuse, submission, or replication in coursework.
 
 **JAFFAL (long-read fusion caller):** https://github.com/Oshlack/JAFFAL
+
 **Reference paper:** Davidson, N.M. et al. (2022). JAFFAL: Detecting fusion genes with long-read transcriptome sequencing. *Genome Biology*, 23, 10.
 
 ### Why This Matters
@@ -171,6 +172,26 @@ JAFFAL-Fusion-Discovery-Mesothelioma/
 └── data/
 └── README_data_structure.md
 
+## My Contribution
+
+This project represents my independent development of a long-read, splice-aware fusion discovery workflow for murine mesothelioma. JAFFAL is written in **Nextflow DSL1**, which is monolithic and difficult to inspect or modify. I did not build custom wrapper scripts; instead, I focused on understanding, debugging, and correctly executing the existing JAFFAL pipeline while developing my own external triage and scoring layers.
+
+My contributions include:
+
+- Debugging JAFFAL’s DSL1 pipeline on HPC, resolving repeated access, configuration, and execution errors caused by its non‑modular structure.
+- Learning how JAFFAL internally processes fusion reads, breakpoint clustering, and confidence assignment despite limited visibility into its DSL1 code.
+- Designing a reproducible workflow *around* JAFFAL using minimap2, samtools, and R to test outputs and understand JAFFAL’s internal behaviour.
+- Implementing custom cleaning rules to remove read-through, pseudogene, ribosomal, and homology-driven artefacts that JAFFAL reports but does not fully filter.
+- Developing FusionScore and CohortScore as external analytical layers to prioritise biologically plausible, recurrent fusion events across replicates.
+- Performing multi-replicate fusion analysis for AE17 and AB1-HA, including breakpoint concordance, recurrence profiling, and support scaling.
+- Creating visual summaries (oncoprints, UpSet plots, support matrices) to interpret fusion behaviour across libraries.
+- Conducting IGV validation of top-ranked candidates such as Fam221b–Serf2.
+- Documenting the entire workflow, scoring system, and triage logic in a structured, portfolio-safe format.
+
+This repository reflects the computational and analytical components I personally built during my Master’s dissertation, including the additional layers required to make JAFFAL’s DSL1 output usable, interpretable, and biologically meaningful.
+
+
+
 ##  Ethical Notice
 
 This repository contains **only** my scripts, documentation, and summaries.  
@@ -180,8 +201,14 @@ It does **not** contain raw FASTQ, BAM, JAFFAL CSV outputs, IGV screenshots, or 
 
 This project taught me how long-read fusion detection differs from short-read approaches, how exon-boundary concordance improves confidence, and how multi-replicate scoring can elevate biologically meaningful candidates.
 
-##  Author
+## Acknowledgements 
 
+I am deeply grateful to **Professor Jenette Creaney** and **Xiao Zhong** for their guidance, expertise, and encouragement throughout this project. Their mentorship shaped both the scientific direction and the computational design of this work.
+
+Special thanks to the UWA **KAYA HPC team** for providing computational resources, and to my colleagues, friends, and family for their support during my Master’s research journey.
+
+
+##  Author
 **Harshita Khot**  
 Master of Bioinformatics — UWA
 

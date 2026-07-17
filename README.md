@@ -143,7 +143,7 @@ IGV visualisation confirmed exon-consistent split reads for **Fam221b–Serf2**,
 - **JAFFAL** — splice-aware long-read fusion caller  
 - **Minimap2** — transcriptome + genome alignment  
 - **Samtools** — BAM processing  
-- **RStudio + ggplot2 + ComplexHeatmap** — visualisation  
+- **RStudio(normal R + Bioconductor package) + ggplot2 + ComplexHeatmap** — visualisation  
 - **IGV** — read-level validation  
 
 
